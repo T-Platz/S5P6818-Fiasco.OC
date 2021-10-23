@@ -1,0 +1,18 @@
+# vim:set ft=make:
+
+SUBSYSTEMS            += LIBUART
+OBJECTS_LIBUART       += uart_s5p6818.o
+PREPROCESS_PARTS      += libuart pic_gic psci generic_tickless_idle
+INTERFACES_KERNEL     += gic
+RAM_PHYS_BASE         := 0x40000000
+
+config_IMPL           += config-arm-s5p6818
+uart_IMPL             += uart-arm-s5p6818
+mem_layout_IMPL       += mem_layout-arm-s5p6818
+pic_IMPL              += pic-gic pic-arm-s5p6818
+timer_IMPL            += timer-arm-s5p6818
+timer_tick_IMPL       += timer_tick-single-vector
+kernel_uart_IMPL      += kernel_uart-arm-s5p6818
+reset_IMPL            += reset-arm-s5p6818
+clock_IMPL            += clock-generic
+platform_control_IMPL += platform_control-arm-s5p6818
