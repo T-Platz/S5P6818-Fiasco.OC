@@ -1,5 +1,5 @@
 # S5P6818-Fiasco.OC
-Collection of drivers and config files for running the Fiasco.OC microkernel on the S5P6818 SoC.
+A collection of drivers and config files for running the Fiasco.OC microkernel on the S5P6818 SoC.
 
 The drivers are the following ones:
 - ```config-arm-s5p6818.cpp```: Defines the ```TARGET_NAME``` symbol.
